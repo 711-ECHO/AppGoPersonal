@@ -21,7 +21,6 @@ export default function Login( {navigation} ){
             
 
         }      
-
         const iniciar = () => {
             console.log("Email:", email);
             if (email== 'gopersonal@gmail.com' && contra== 'gopersonal'){

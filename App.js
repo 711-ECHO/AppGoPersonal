@@ -6,12 +6,9 @@ import Home from './screens/Home';
 import Productos from "./screens/Productos";
 
 // Only import react-native-gesture-handler on native platforms
-//import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer} from '@react-navigation/native';
 
-
-/* para lo de la imagen tambien puedo usar el import*/ 
 
 
 
@@ -61,14 +58,14 @@ export default function App() {
     }
 
 //<>
-console.log("Login.js se está renderizando");
+console.log("Login.js se está renderizando"); //En un momento de la ejecucion algo no me funcionaba y queria ver en la terminal si se estaba ejecutando o no
 
   return (
     <NavigationContainer>
       <MyStack/>
     </NavigationContainer>
 
-    /*recordar: el view, text por ejemplo, son propios de react native*/
+    /*Recordar: el view, text por ejemplo, son propios de react native*/
 
   );
 }
@@ -88,4 +85,5 @@ const styles = StyleSheet.create({
   }
 
 });
+
 /* view es flex por defecto,a diferencia del div que no es.*/

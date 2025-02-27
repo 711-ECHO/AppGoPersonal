@@ -10,13 +10,14 @@ export default function Home({navigation}){
     .then(data => {   
       setProductos(data);  
     })
+
     .catch(error => console.error(" Error al obtener productos:", error));
         },[]);
   
   
   return(
-  <View>  
-    <SafeAreaView >
+    
+  <SafeAreaView style={styles.safeArea}>
   <FlatList 
   data={productos} 
   keyExtractor={(item) => item.id.toString()} 
@@ -26,14 +27,11 @@ export default function Home({navigation}){
 
       <Image source={{ uri: item.image }} style={styles.imagen}/>    
       <Text style={styles.tituloProducto}>{item.title}</Text>
-      <Text style={styles.precio}>{item.price}</Text>
+      <Text style={styles.precio}>${item.price}</Text>
     </TouchableOpacity>
   )}  
 />
-
-     
     </SafeAreaView>
-    </View>
 );
 }
   
